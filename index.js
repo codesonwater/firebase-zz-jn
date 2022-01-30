@@ -25,21 +25,22 @@ const db = getFirestore();
 const shopRef = db.collection('customers')
 
 // 3a) CREATE A DOC
-// shopRef.doc('cust123').set({
-//     firstName: "Archie",
-//     lastName: "Octavius",
-//     billingAddress1: "777 Heaven's Door",
-//     billingAddress2: "",
-//     city: "Hell",
-//     state: "MI",
-//     postal: "49232", 
-//     email: "paradoxparadigm@yahoo.com",
-//     phone: "8108746734",
-//     returnCust: false,
-// })
-//  .then(()=> {
-//      console.log('Added Customer')
-//  }).catch(console.error);
+shopRef.doc('cust789').set({
+    firstName: "Archie",
+    lastName: "Octavius",
+    billingAddress1: "777 Heaven's Door",
+    billingAddress2: "",
+    city: "Hell",
+    state: "MI",
+    postal: "49232", 
+    email: "paradoxparadigm@yahoo.com",
+    phone: "8108746734",
+    returnCust: false,
+    productArray: [{price: 40,productId: 100, qty: 3}, {price: 35, productId: 101, qty: 1}]
+})
+ .then(()=> {
+     console.log('Added Customer')
+ }).catch(console.error);
 
 
 // 3b) READ A DOC  
@@ -62,9 +63,5 @@ const shopRef = db.collection('customers')
 //  .catch(console.error);
 
 // 3d) UPDATE A COLLECTION AND ADD A FIELD
-shopRef.doc('cust123').update({returnCust: false, firstName:'updated to Archibald', country: 'USA'})
+// shopRef.doc('cust123').update({returnCust: false, firstName:'updated to Archibald', country: 'USA'})
 //added country field
-
-
-
-
