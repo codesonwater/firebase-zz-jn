@@ -76,8 +76,14 @@ const db = getFirestore();
 // shopRef.doc('cust123').update({returnCust: false, firstName:'updated to Archibald', country: 'USA'})
 //added country field
 
+
+
+
+// Original strucuture from 
 // read a collection
-app.get('/collection/getall', async (request, response) => {}); 
+app.get('/collection/getall', async (request, response) => {
+  
+}); 
 // read a doc
 app.get('/collection/getone', async (request, response) => {}); 
 // add a doc to a colleciton
